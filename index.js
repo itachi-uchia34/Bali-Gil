@@ -37,6 +37,11 @@ async function anime() {
 }
 
 // ================= TELEGRAM CONTROL =================
+const TelegramBot = require("node-telegram-bot-api");
+
+const tg = new TelegramBot(8367697485:AAFzWS-fDDrUdh0oYBIx30ncwjsRpZRI3hc, { polling: true });
+
+const ADMIN = "8367697485";
 tg.onText(/\/start/, (msg) => {
     tg.sendMessage(msg.chat.id, "🤖 Bali System Active");
 });

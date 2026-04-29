@@ -12,15 +12,28 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 // ================= CONFIG =================
 const OWNER = "923XXXXXXXXX@s.whatsapp.net";
 
-const TG_TOKEN = "YOUR_TELEGRAM_TOKEN";
-const TG_ADMIN = "YOUR_TELEGRAM_ID";
+const TG_TOKEN = "8367697485:AAFzWS-fDDrUdh0oYBIx30ncwjsRpZRI3hc";
+const TG_ADMIN = "8367697485";
 
 const tg = new TelegramBot(TG_TOKEN, { polling: true });
 
 let antiLink = {};
 let warn = {};
 let cooldown = {};
+tg.onText(/\/start/, (msg) => {
+    tg.sendMessage(msg.chat.id, "🤖 Bali Gil Bot Control Panel Active");
+});
 
+tg.onText(/\/status/, (msg) => {
+    tg.sendMessage(msg.chat.id, "🟢 WhatsApp Bot Running");
+});
+
+tg.onText(/\/restart/, (msg) => {
+    if (msg.chat.id != ADMIN) return;
+
+    tg.sendMessage(msg.chat.id, "♻️ Restarting bot...");
+    process.exit();
+});
 // ================= SAFE SYSTEM =================
 function isSpam(user) {
     const now = Date.now();

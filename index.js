@@ -11,52 +11,47 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 
 // ================= CONFIG =================
 const OWNER = "923XXXXXXXXX@s.whatsapp.net";
+
 const TG_TOKEN = "YOUR_TELEGRAM_TOKEN";
 const TG_ADMIN = "YOUR_TELEGRAM_ID";
 
 const tg = new TelegramBot(TG_TOKEN, { polling: true });
 
 let antiLink = {};
-let warnCount = {};
+let warn = {};
 let cooldown = {};
 
-// ================= SAFE SETTINGS =================
-const COOLDOWN_TIME = 3000; // 3 sec per command per user
-
+// ================= SAFE SYSTEM =================
 function isSpam(user) {
     const now = Date.now();
     if (!cooldown[user]) cooldown[user] = 0;
-
-    if (now - cooldown[user] < COOLDOWN_TIME) {
-        return true;
-    }
-
+    if (now - cooldown[user] < 2500) return true;
     cooldown[user] = now;
     return false;
 }
 
 // ================= ANIME DP =================
-async function getAnime() {
+async function anime() {
     const r = await axios.get("https://api.waifu.pics/sfw/avatar");
     return r.data.url;
 }
 
 // ================= TELEGRAM CONTROL =================
-tg.onText(/\/start/, (m) => {
-    tg.sendMessage(m.chat.id, "🤖 Bali Safe Bot System Active");
+tg.onText(/\/start/, (msg) => {
+    tg.sendMessage(msg.chat.id, "🤖 Bali System Active");
 });
 
-tg.onText(/\/status/, (m) => {
-    tg.sendMessage(m.chat.id, "🟢 WhatsApp Bot Running Safe Mode");
+tg.onText(/\/status/, (msg) => {
+    tg.sendMessage(msg.chat.id, "🟢 WhatsApp Bot Running");
 });
 
-tg.onText(/\/restart/, (m) => {
-    if (m.chat.id != TG_ADMIN) return;
-    tg.sendMessage(m.chat.id, "♻️ Restarting...");
+tg.onText(/\/restart/, (msg) => {
+    if (msg.chat.id != TG_ADMIN) return;
+    tg.sendMessage(msg.chat.id, "♻️ Restarting...");
     process.exit();
 });
 
-// ================= WHATSAPP =================
+// ================= BOT =================
 async function startBot() {
     const { state, saveCreds } = await useMultiFileAuthState("auth");
 
@@ -68,16 +63,40 @@ async function startBot() {
     // ===== CONNECTION =====
     sock.ev.on("connection.update", async (u) => {
         if (u.connection === "open") {
-            console.log("🔥 SAFE BOT ONLINE");
+            console.log("🔥 BOT ONLINE");
 
-            await sock.updateProfileName("Bali Gil Safe Bot");
-            await sock.updateProfileStatus("🛡 Safe Mode Active");
+            await sock.updateProfileName("Bali Gil Bot");
+            await sock.updateProfileStatus("🤖 Premium System Active");
 
             try {
-                const img = await getAnime();
+                const img = await anime();
                 const buffer = await axios.get(img, { responseType: "arraybuffer" });
+
                 await sock.updateProfilePicture(sock.user.id, Buffer.from(buffer.data));
             } catch {}
+        }
+    });
+
+    // ================= WELCOME + GOODBYE =================
+    sock.ev.on("group-participants.update", async (u) => {
+        const { id, participants, action } = u;
+
+        for (let user of participants) {
+            const name = user.split("@")[0];
+
+            if (action === "add") {
+                await sock.sendMessage(id, {
+                    text: `🌸 Welcome @${name} to Bali Gil Group 🤖`,
+                    mentions: [user]
+                });
+            }
+
+            if (action === "remove") {
+                await sock.sendMessage(id, {
+                    text: `🌙 Goodbye @${name} 💔`,
+                    mentions: [user]
+                });
+            }
         }
     });
 
@@ -96,10 +115,9 @@ async function startBot() {
 
         const sender = msg.key.participant || from;
 
-        // ================= ANTI SPAM =================
         if (isSpam(sender)) return;
 
-        // ================= SAFE ANTI LINK =================
+        // ================= ANTI LINK =================
         if (isGroup && antiLink[from]) {
             if (text.match(/(https?:\/\/|chat\.whatsapp\.com)/gi)) {
                 try {
@@ -107,16 +125,15 @@ async function startBot() {
                     const admins = meta.participants.filter(p => p.admin).map(p => p.id);
 
                     if (!admins.includes(sender)) {
-                        warnCount[sender] = (warnCount[sender] || 0) + 1;
+                        warn[sender] = (warn[sender] || 0) + 1;
 
                         await sock.sendMessage(from, {
-                            text: `⚠️ Warning ${warnCount[sender]}/3`
+                            text: `⚠️ Warning ${warn[sender]}/3`
                         });
 
                         await sock.sendMessage(from, { delete: msg.key });
 
-                        // only kick after 3 warnings
-                        if (warnCount[sender] >= 3) {
+                        if (warn[sender] >= 3) {
                             await sock.groupParticipantsUpdate(from, [sender], "remove");
                         }
                     }
@@ -124,16 +141,15 @@ async function startBot() {
             }
         }
 
-        // ================= COMMANDS =================
         if (!text.startsWith("!")) return;
 
         const args = text.slice(1).split(" ");
         const cmd = args.shift().toLowerCase();
 
-        // ===== MENU =====
+        // ================= MENU =================
         if (cmd === "menu") {
             return sock.sendMessage(from, {
-                text: `🔥 SAFE BALI BOT
+                text: `🔥 BALI SYSTEM
 
 !time !calc !quote !joke
 !antilink on/off
@@ -142,7 +158,7 @@ async function startBot() {
             });
         }
 
-        // ===== ANTI LINK =====
+        // ================= ANTI LINK =================
         if (cmd === "antilink") {
             const meta = await sock.groupMetadata(from);
             const admins = meta.participants.filter(p => p.admin).map(p => p.id);
@@ -153,27 +169,27 @@ async function startBot() {
             if (args[0] === "off") antiLink[from] = false;
         }
 
-        // ===== TIME =====
+        // ================= TIME =================
         if (cmd === "time") {
             return sock.sendMessage(from, {
                 text: moment().format("HH:mm:ss")
             });
         }
 
-        // ===== CALC =====
+        // ================= CALC =================
         if (cmd === "calc") {
             return sock.sendMessage(from, {
                 text: String(eval(args.join(" ")))
             });
         }
 
-        // ===== QUOTE =====
+        // ================= QUOTE =================
         if (cmd === "quote") {
             const r = await axios.get("https://api.quotable.io/random");
             return sock.sendMessage(from, { text: r.data.content });
         }
 
-        // ===== JOKE =====
+        // ================= JOKE =================
         if (cmd === "joke") {
             const r = await axios.get("https://official-joke-api.appspot.com/random_joke");
             return sock.sendMessage(from, {
@@ -181,7 +197,7 @@ async function startBot() {
             });
         }
 
-        // ===== VIEW ONCE =====
+        // ================= VIEW ONCE =================
         if (cmd === "once") {
             return sock.sendMessage(from, {
                 viewOnceMessage: {
@@ -190,17 +206,18 @@ async function startBot() {
             });
         }
 
-        // ===== MP3 (SAFE RATE LIMITED) =====
+        // ================= MP3 =================
         if (cmd === "mp3") {
-            if (!ytdl.validateURL(args[0])) return;
+            const url = args[0];
+            if (!ytdl.validateURL(url)) return;
 
-            await sock.sendMessage(from, { text: "⏳ Processing..." });
+            await sock.sendMessage(from, { text: "⏳ Downloading..." });
 
-            const info = await ytdl.getInfo(args[0]);
+            const info = await ytdl.getInfo(url);
             const title = info.videoDetails.title.replace(/[^\w\s]/gi, "");
             const file = `./${title}.mp3`;
 
-            const stream = ytdl(args[0], { quality: "highestaudio" });
+            const stream = ytdl(url, { quality: "highestaudio" });
 
             ffmpeg(stream)
                 .audioBitrate(128)

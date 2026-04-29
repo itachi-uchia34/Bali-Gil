@@ -12,8 +12,8 @@ ffmpeg.setFfmpegPath(ffmpegPath);
 // ================= CONFIG =================
 const OWNER = "923XXXXXXXXX@s.whatsapp.net";
 
-const TG_TOKEN = "8367697485:AAFzWS-fDDrUdh0oYBIx30ncwjsRpZRI3hc";
-const TG_ADMIN = "8367697485";
+const TG_TOKEN = "8663287371:AAEU0_YNUyURYlElR5o95EW6V1viJ3tjtfc";
+const TG_ADMIN = "8663287371";
 
 const tg = new TelegramBot(TG_TOKEN, { polling: true });
 
@@ -52,9 +52,9 @@ async function anime() {
 // ================= TELEGRAM CONTROL =================
 const TelegramBot = require("node-telegram-bot-api");
 
-const tg = new TelegramBot(8367697485:AAFzWS-fDDrUdh0oYBIx30ncwjsRpZRI3hc, { polling: true });
+const tg = new TelegramBot(8663287371:AAEU0_YNUyURYlElR5o95EW6V1viJ3tjtfc, { polling: true });
 
-const ADMIN = "8367697485";
+const ADMIN = "8663287371";
 tg.onText(/\/start/, (msg) => {
     tg.sendMessage(msg.chat.id, "🤖 Bali System Active");
 });

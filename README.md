@@ -32,8 +32,11 @@
 [![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
 
 <p align="center">
-  <img src="bali_gil_banner.png" alt="BALI GIL bot Banner" width="100%">
+  <a href="https://wa.me/923110470403">
+    <img src="banner.jpg" alt="BALI-GIL BOT" width="100%">
+  </a>
 </p>
+
 
 
 ---

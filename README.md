@@ -31,11 +31,8 @@
 [![Owner](https://img.shields.io/badge/Developer-Itachi%20Uchiha-red)](https://github.com/itachi-uchia34)
 [![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
 
-<p align="center">
-  <a href="https://wa.me/923110470403">
-    <img src="banner.jpg" alt="BALI-GIL BOT" width="100%">
-  </a>
-</p>
+[![BALI-GIL BOT](banner.jpg)](https://wa.me/923110470403)
+
 
 
 

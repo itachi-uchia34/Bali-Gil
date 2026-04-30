@@ -1,3 +1,4 @@
+
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:6a0dad,100:ab47bc&text=BALI%20GIL&fontColor=ffffff&fontSize=85&fontAlignY=40&animation=twinkling&desc=Powered%20By%20ITACHI%20UCHIHA&descSize=20&descAlignY=65&stroke=ffffff&strokeWidth=1.2" width="100%"/>
@@ -31,7 +32,8 @@
 [![Owner](https://img.shields.io/badge/Developer-Itachi%20Uchiha-red)](https://github.com/itachi-uchia34)
 [![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
 
-[![BALI-GIL BOT](https://drive.google.com/u/0/drive-viewer/AKGpiha1WF6gr1liVnVSlK-exx_KjBDrvJCnB3jQv617Yd-A7IpJHIZlySIcUbClUimBSzqWxRiQluRorFl9EBztCXKu4cV6luxOzdo=s2560?auditContext=forDisplay)]
+<img src="https://drive.google.com/u/0/drive-viewer/AKGpiha1WF6gr1liVnVSlK-exx_KjBDrvJCnB3jQv617Yd-A7IpJHIZlySIcUbClUimBSzqWxRiQluRorFl9EBztCXKu4cV6luxOzdo=s2560?auditContext=forDisplay"/>
+
 
 
 ---

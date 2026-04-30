@@ -22,6 +22,56 @@
 </div>
 </p>
 
+<div align="center">
+
+# 🌌 BALI GIL bot
+**"Even the strongest of opponents always has a weakness."**
+
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen)](https://github.com/itachi-uchia34)
+[![Owner](https://img.shields.io/badge/Developer-Itachi%20Uchiha-red)](https://github.com/itachi-uchia34)
+[![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
+
 <p align="center">
-  <img src="your_image_link_here.png" alt="BALI GIL bot" width="640" height="320">
+  <img src="bali_gil_banner.png" alt="BALI GIL bot Banner" width="100%">
 </p>
+
+
+---
+<div align="center">
+<sub>Built with ❤️ and Genjutsu.</sub>
+</div>
+
+## 👁️ Overview
+**BALI GIL bot** is a powerful automation tool designed with the precision of the Sharingan. Built for speed, efficiency, and reliability, it handles complex tasks while maintaining a sleek, minimalist presence.
+
+### ⚡ Key Features
+* **Amaterasu Execution:** High-speed processing that leaves no room for errors.
+* **Tsukuyomi Automation:** Advanced scheduling and task management.
+* **Susanoo Security:** Robust protection layers to keep your data safe.
+* **Izanami Loops:** Smart retry logic for failed operations.
+
+---
+
+## 🛠️ Technical Stack
+| Category | Technology |
+| :--- | :--- |
+| **Engine** | Node.js / Python |
+| **Database** | MongoDB / PostgreSQL |
+| **Library** | Discord.js / Baileys / Telethon |
+| **Infrastructure** | Docker / Heroku / VPS |
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Scroll
+```bash
+git clone [https://github.com/itachi-uchia34/bali-gil-bot.git](https://github.com/itachi-uchia34/bali-gil-bot.git)
+cd bali-gil-bot
+npm install # or pip install -r requirements.txt
+npm start # or python main.py
+
+Itachi Uchiha > "People live their lives bound by what they accept as correct and true. That’s how they define 'reality'."
+* **Image Hosting:** To make the banner show up, upload your image to a folder in your GitHub repository (e.g., an `assets` folder). Then, replace the placeholder URL in the code above with the **Raw** link to that image.
+* **Badges:** You can customize the badges at the top using [Shields.io](https://shields.io/) to match your specific coding languages or bot version.
+* **Socials:** Consider adding a "Contact" section with your Telegram or Discord link if you plan on sharing this bot with others.

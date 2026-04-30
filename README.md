@@ -31,9 +31,7 @@
 [![Owner](https://img.shields.io/badge/Developer-Itachi%20Uchiha-red)](https://github.com/itachi-uchia34)
 [![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
 
-[![BALI-GIL BOT](banner.jpg)](https://wa.me/923110470403)
-
-
+[![BALI-GIL BOT](https://drive.google.com/file/d/18DX3oRbQ1E__z-64MUMOM-mRtmSfsLqr/view?usp=drivesdk)]()
 
 
 ---

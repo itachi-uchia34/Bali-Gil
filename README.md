@@ -32,7 +32,7 @@
 [![Owner](https://img.shields.io/badge/Developer-Itachi%20Uchiha-red)](https://github.com/itachi-uchia34)
 [![Language](https://img.shields.io/badge/Language-JavaScript/Python-orange)](https://github.com/itachi-uchia34)
 
-<img src="https://drive.google.com/u/0/drive-viewer/AKGpiha1WF6gr1liVnVSlK-exx_KjBDrvJCnB3jQv617Yd-A7IpJHIZlySIcUbClUimBSzqWxRiQluRorFl9EBztCXKu4cV6luxOzdo=s2560?auditContext=forDisplay"/>
+![BALI GIL BOT](https://lh3.googleusercontent.com/d/18DX3oRbQ1E__z-64MUMOM-mRtmSfsLqr)
 
 
 

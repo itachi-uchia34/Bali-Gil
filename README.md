@@ -43,7 +43,7 @@
 
 ## 🔑 ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ ɪᴅ
 <p align="center">
-  <a href="https://timoth-timnasa.onrender.com/pair">
+  <a href="https://.onrender.com/pair">
     <img src="https://img.shields.io/badge/GENERATE-SESSION_ID-FF00FF?style=for-the-badge&logo=appveyor&logoColor=white" width="380" height="70"/>
   </a>
 </p>

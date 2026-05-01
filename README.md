@@ -75,3 +75,47 @@ Itachi Uchiha > "People live their lives bound by what they accept as correct an
 * **Image Hosting:** To make the banner show up, upload your image to a folder in your GitHub repository (e.g., an `assets` folder). Then, replace the placeholder URL in the code above with the **Raw** link to that image.
 * **Badges:** You can customize the badges at the top using [Shields.io](https://shields.io/) to match your specific coding languages or bot version.
 * **Socials:** Consider adding a "Contact" section with your Telegram or Discord link if you plan on sharing this bot with others.
+
+
+
+
+## 🔑 ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ ɪᴅ
+<p align="center">
+  <a href="https://timoth-timnasa.onrender.com/pair">
+    <img src="https://img.shields.io/badge/GENERATE-SESSION_ID-FF00FF?style=for-the-badge&logo=appveyor&logoColor=white" width="380" height="70"/>
+  </a>
+</p>
+
+---
+
+## ☁️ ʜᴇʀᴏᴋᴜ ᴅᴇᴘʟᴏʏᴍᴇɴᴛ (ʙɪɢ ᴏᴘᴛɪᴏɴs)
+<p align="center">
+  <a href="https://signup.heroku.com/">
+    <img src="https://img.shields.io/badge/CREATE-HEROKU_ACCOUNT-000000?style=for-the-badge&logo=heroku&logoColor=purple" width="320" height="60"/>
+  </a>
+  <br><br>
+  <a href="https://dashboard.heroku.com/new?template=https://github.com/Next5x/TIMNASA_TMD1">
+    <img src="https://img.shields.io/badge/DEPLOY-ON_HEROKU-8A2BE2?style=for-the-badge&logo=heroku&logoColor=white" width="350" height="75"/>
+  </a>
+</p>
+
+---
+
+## 🚀 ᴘᴀɴᴇʟs & ᴏᴛʜᴇʀ ʜᴏsᴛɪɴɢ ᴏᴘᴛɪᴏɴs
+<p align="center">
+  <a href="https://render.com/">
+    <img src="https://img.shields.io/badge/RENDER-PANEL-46E3B7?style=for-the-badge&logo=render&logoColor=white" width="220" height="50"/>
+  </a>
+  <a href="https://koyeb.com/">
+    <img src="https://img.shields.io/badge/KOYEB-PANEL-000000?style=for-the-badge&logo=koyeb&logoColor=white" width="220" height="50"/>
+  </a>
+  <br><br>
+  <a href="https://railway.app/">
+    <img src="https://img.shields.io/badge/RAILWAY-HOST-131415?style=for-the-badge&logo=railway&logoColor=white" width="220" height="50"/>
+  </a>
+  <a href="https://pterodactyl.io/">
+    <img src="https://img.shields.io/badge/PTERODACTYL-PANEL-D93F3F?style=for-the-badge&logo=pterodactyl&logoColor=white" width="220" height="50"/>
+  </a>
+</p>
+
+---

@@ -74,8 +74,9 @@ npm start # or python main.py
 Itachi Uchiha > "People live their lives bound by what they accept as correct and true. That’s how they define 'reality'."
 * **Image Hosting:** To make the banner show up, upload your image to a folder in your GitHub repository (e.g., an `assets` folder). Then, replace the placeholder URL in the code above with the **Raw** link to that image.
 * **Badges:** You can customize the badges at the top using [Shields.io](https://shields.io/) to match your specific coding languages or bot version.
-* **Socials:** Consider adding a "Contact" section with your Telegram or Discord link if you plan on sharing this bot with others.
+* **Socials:** Consider adding a "Contact" section with your Telegram or Discord link if you plan on sharing this bot with others."
 
+##
 
 
 

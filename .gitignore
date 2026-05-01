@@ -1,29 +1,23 @@
- # Dependencies
- node_modules/
- package-lock.json
- 
- # Runtime data
- tmp/
- temp/
- 
- # Session files
- session/
- 
+# Dependencies
+node_modules/
+package-lock.json
 
- # Environment variables
- .env
- 
- # Log files
- *.log
- npm-debug.log*
- yarn-debug.log*
- yarn-error.log*
- 
- # Editor directories and files
- .idea/
- .vscode/
- *.suo
- *.ntvs*
- *.njsproj
- *.sln
- *.sw?
+# Session & Authentication (CRITICAL for security)
+session/
+auth_info_baileys/
+creds.json
+*.json.gz
+
+# Environment Secrets
+.env
+
+# Logs and Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
